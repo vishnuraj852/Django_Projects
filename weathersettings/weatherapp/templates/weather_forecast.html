@@ -1,0 +1,32 @@
+{% load static %}
+<body>
+{% if daily_data %}
+{% for i in daily_data %}
+<div class="forecast-container" width="15%">
+<h3>{{i.day}} <br>time : {{i.time}}<br>{{i.temp1}}°C  <img src="https://openweathermap.org/img/wn/{{i.icon}}.png" alt="Weather Icon"></h3>
+</div>
+{% endfor %}
+{% endif %}
+</body>
+
+<style>
+.forecast-container {
+  justify-content: center;
+  width: 15%;
+  margin:5px;
+  margin-left:20px;
+  padding:5px;
+  padding-left:20px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, white , cyan);
+}
+body{
+ margin:0;
+ padding:0;
+ }
+    </style>

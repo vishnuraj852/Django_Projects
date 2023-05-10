@@ -1,0 +1,54 @@
+{% load static %}
+<div class="forecast">
+{% if weather_data %}
+    <div class="place">{{ weather_data.city }}</div>
+    <img src="https://openweathermap.org/img/wn/{{ weather_data.icon }}.png" alt="Weather Icon" width="100px" class="icon">
+   <div class="status">{{weather_data.status}}</div>
+    <p class="des">{{ weather_data.description }}</p>
+    <p class="temp"> {{ weather_data.temp }}°C</p>
+
+    {% endif %}
+
+</div>
+
+
+<style>
+.place{
+   font-family : Lucida Console;
+   font-size : 50px;
+   font-family : Lucida Console;
+
+}
+.temp{
+ font-size: 40px;
+ font-family : Lucida Console;
+
+}
+.des{
+    font-size: 30px;
+ font-family : Lucida Console;
+}
+.forecast {
+
+
+  padding: 10px;
+  padding-top:25px;
+  margin-left: 40%;
+  width: calc(100% / 5 - 20px);
+  box-sizing: border-box;
+  text-align:center;
+  }
+
+
+.icon{
+   margin: 0px;
+   padding-top:0px;
+   }
+.status{
+ color: green;
+ font-size:25px;
+ font-family: 'Lucida Console';
+
+
+}
+</style>
