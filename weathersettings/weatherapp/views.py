@@ -6,7 +6,7 @@ import requests
 
 # Create your views here.
 def index(request):
-    api_key = 'ebb362695f4b76859cd3ea2ff3c3ef43'
+    api_key = '<YOUR API KEY>'
 
     if request.method == 'POST':
         city = request.POST['city']
